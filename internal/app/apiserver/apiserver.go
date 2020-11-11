@@ -1,6 +1,7 @@
 package apiserver
 
 import (
+	"http-rest-api/internal/app/store"
 	"io"
 	"net/http"
 
@@ -13,6 +14,7 @@ type APIServer struct {
 	config *Config
 	logger *logrus.Logger
 	router *mux.Router
+	store *store.Store
 }
 
 //New ...
